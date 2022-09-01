@@ -105,11 +105,18 @@ body {
 
 .principal {
     padding: 24px 16px;
+    display: grid;
+    gap: 16px;
 
 }
 
 .titulo-pagina {
     font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.titulo-secao {
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -119,6 +126,11 @@ body {
     overflow: hidden;
     background: #2c343a;
 }
+
+.cartao--destaque {
+    margin-bottom: 16px;
+}
+
 .cartao__conteudo {
     padding: 16px;
     display: grid;
@@ -155,6 +167,11 @@ body {
     margin-right: 8px;
 }
 
+.cartao__info--preco::before {
+    content: "\e905";
+    margin-right: 8px;
+}
+
 .cartao__info--vizualizacao::before {
     content: "\e90f";
     margin-right: 8px;
@@ -169,10 +186,16 @@ body {
     height: 40px;
     border-radius: 10px;
     font-size: 0.9rem;
+    justify-self: flex-end;
 }
 
 .cartao__botao--play::before {
     content: "\e90b";
+    font-size: 24px;
+}
+
+.cartao__botao--comprar::before {
+    content: "\e901";
     font-size: 24px;
 }
 
@@ -183,4 +206,9 @@ body {
 
 .cartao__botao--destaque::before {
     margin-right: 8px;
+}
+
+.secao {
+    display: grid;
+    gap: 16px;
 }
