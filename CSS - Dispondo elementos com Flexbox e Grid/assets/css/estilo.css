@@ -206,10 +206,14 @@ body {
         column-gap: 32px;
         padding: 16px 60px;
     }
+
     .titulo-pagina {
         grid-area: titulo-pagina;
     }
-    
+
+    .titulo-secao {
+        grid-column: span 4;
+    }
 }
 .cartao {
     width: 100%;
@@ -218,6 +222,9 @@ body {
     background: #2c343a;
 }
 
+.cartao__imagem--desktop {
+    display: none;
+}
 .cartao--destaque {
     margin-bottom: 16px;
 }
@@ -304,11 +311,27 @@ body {
 }
 
 @media screen and (min-width: 1440px) {
+    .cartao--destaque {
+        margin-bottom: 0;
+    }
 
+    .cartao__imagem--mobile {
+        display: none;
+    }
+
+    .cartao__imagem--desktop {
+        display: block;
+    }
+
+    .cartao__botao--destaque {
+        grid-column: auto;
+        padding: 16px 8px;
+    }
     .cartao--recentes {
         display: grid;
         grid-template-columns: auto auto;
         align-items: center;
+        align-self: flex-start;
         row-gap: 24px;
         width: 256px;
         padding: 16px;
@@ -361,28 +384,33 @@ body {
     gap: 16px;
 }
 
-/*classes unicas para definir o grid areas*/
+@media screen and (min-width: 1440px) {
+    .secao {
+        grid-template-columns: repeat(4, 1fr);
+    }
 
-.destaque-video {
-    grid-area: destaque-video;
-}
-
-.videos-recentes {
-    grid-area: videos-recentes;
-}
-
-.secao-videos {
-    grid-area: secao-videos;
-}
-
-.camisas-recentes {
-    grid-area: camisas-recentes;
-}
-
-.destaque-camisas {
-    grid-area: destaque-camisas;
-}
-
-.secao-camisas {
-    grid-area: secao-camisas;
+    /*classes unicas para definir o grid areas*/
+    .destaque-video {
+        grid-area: destaque-video;
+    }
+    
+    .videos-recentes {
+        grid-area: videos-recentes;
+    }
+    
+    .secao-videos {
+        grid-area: secao-videos;
+    }
+    
+    .camisas-recentes {
+        grid-area: camisas-recentes;
+    }
+    
+    .destaque-camisas {
+        grid-area: destaque-camisas;
+    }
+    
+    .secao-camisas {
+        grid-area: secao-camisas;
+    }
 }
