@@ -136,5 +136,71 @@ body {
     width: 100%;
     border-radius: 15px;
     overflow: hidden;
+    background-color: #2c343a;
     
+}
+
+/*Cria uma margem maior espaçando o cartao destaque dos demais cartões*/
+.cartao--destaque {
+    margin-bottom: 16px;
+}
+
+/*Cria o Grid container para organizar as informações do cartão em 2 colunas*/
+.cartao__conteudo {
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+/*Estiliza o titulo de cada cartão, fazendo com que ele ocupe as 2 colunas do grid container*/
+.cartao__titulo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    grid-column: span 2;
+}
+
+/*Estiliza o nome do perfil assim como o titulo ocupando as 2 colunas do grid container, e altera a cor*/
+.cartao__perfil {
+    color: #95999c;
+    font-size: 0.9rem;
+    grid-column: span 2;
+}
+
+/*Estilização do texto que nesse caso é "33 visualizações"*/
+.cartao__info {
+    display: flex;
+    align-items: center;
+    color: #95999c;
+}
+
+/*Adiciona o icone de visualização*/
+.cartao__info--vizualizacao::before {
+    content: "\e90f";
+    margin-right: 8px;
+}
+
+/*Estilização do fundo do botão, adicionando cor e formato a ele, alem de posiciona-lo corretamente usando o justify-self*/
+.cartao__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0480dc;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    justify-self: flex-end;
+}
+
+/*Adiciona o icone ao Botão*/
+.cartao__botao--pico::before {
+    content: "\e908";
+    font-size: 24px;
+}
+
+/*Cria o Espaçamento entre os carões presentes nas seções*/
+.secao {
+    display: grid;
+    gap: 16px;
 }
