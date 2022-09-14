@@ -190,7 +190,7 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
 }
-
+/*AQUI*/
 @media screen and (min-width: 1440px) {
     .principal {
         display: grid;
