@@ -199,6 +199,10 @@ body {
     font-weight: bold;
 }
 
+.titulo-secao {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 /*Estilização da seção principal na versão desktop*/
 @media screen and (min-width: 1440px) {
     /*Determina a forma com que as informações são apresentadas na parte principal da pagina*/
@@ -307,17 +311,90 @@ body {
     font-size: 24px;
 }
 
+/*Tira o cartão recentes da versão mobile, pois ela so aparece na versão desktop*/
+.cartao--recentes {
+    display: none;
+}
+
+.cartao__imagem--desktop {
+    display: none;
+}
+@media screen and (min-width: 1440px) {
+
+
+    .cartao--destaque{
+        margin-bottom: 0;
+    }
+    .cartao__imagem--mobile {
+        display: none;
+    }    
+
+    .cartao__imagem--desktop {
+        display: block;
+        height: 100%;
+    }
+    /*Tras o cartao de recente de volta para a tela na versão desktop*/
+    .cartao--recentes {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        align-self: flex-start;
+        row-gap: 24px;
+        width: 256px;
+        padding: 16px;
+        box-sizing: border-box;
+    }    
+
+    .cartao--recentes .cartao__titulo {
+        grid-column: auto;
+    }
+    
+    /*Configura o link "vert todos"*/
+    .cartao__link {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #0480dc;
+        justify-self: flex-end;
+    }
+
+    .cartao__lista {
+        display: grid;
+        row-gap: 16px;
+        grid-column: span 2;
+    }
+
+    .cartao__item {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 8px;
+    }
+
+    /*Define o tamanho igual das imagens*/
+    .cartao__item-thumbnail {
+        width: 32px;
+        grid-row: span 2;
+    }
+
+    .cartao__item-titulo {
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        font-weight: 700;
+    }
+
+    .cartao__item-perfil {
+        font-size: 0.8rem;
+        color: #95999c;
+    }
+
+}
 /*Cria o Espaçamento entre os carões presentes nas seções*/
 .secao {
     display: grid;
     gap: 16px;
 }
 
-/*Tira o cartão recentes da versão mobile, pois ela so aparece na versão desktop*/
-.cartao--recentes {
-    display: none;
-}
-
 @media screen and (min-width: 1440px) {
-    
+    .secao {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
