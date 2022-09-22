@@ -1,0 +1,9 @@
+.cabecalhoPrincipal .container {
+    display: flex;
+    align-items: center; /*Alinha verticalmente ao centro*/
+    justify-content: space-between; /*Define que o espaço horizontal fica entre os elementos*/
+}
+
+.cabecalhoPrincipal-nav {
+    display: flex;
+}
