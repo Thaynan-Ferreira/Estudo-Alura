@@ -41,3 +41,51 @@
     width: 20%;
 }
 
+
+
+/*Parte mobile*/
+@media screen and (max-width: 768px) {
+    
+    /*Trocamos a orientação do titulo para coluna*/
+    .cabecalhoPrincipal-nav{
+        flex-direction: column;
+    }
+
+    /*Trocamos a orientação do menu de navegação para coluna*/
+    .cabecalhoPrincipal .container {
+        flex-direction: column;
+        align-items: initial;/*Faz com que o item ocupe 100% da alrgura da pagina e nao so o centro como está configurado na versão desktop*/
+        text-align: center; /*Alinha somente o texto ao centro*/
+    }
+
+    /*Define a largura maxima da pagina para os cards da grade de curso, fazado com que ela fique um em cima do outro*/
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    /*Define a orientação da grade de curso como coluna*/
+    .conteudoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    /*Tira a predefinição de altura da area do mapa de cursos*/
+    .rodapePrincipal-navMap-list {
+        height: auto;
+    }
+
+    /*Define a configuração mobile para o rodapé*/
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        margin: 0;
+        width: 100%;
+    }
+
+    /*Define que o menu "Nosso App" fique na frente na versão mobile*/
+    .cabecalhoPrincipal-nav-link-app {
+        order: -1;
+    }
+}
