@@ -41,7 +41,22 @@
     width: 20%;
 }
 
+/*Faz com que o video e as vantagens fiquem um ao lado do outro*/
+.videoSobre .container {
+    display: flex;
+}
 
+/*Define tos textos centralizados e ajusta o botão com a largura do texto*/
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;/*Adiciona o espaço extra no item*/
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;/*Adiciona todo o espaço na lista fazendo com que o botão fique no final da pagina*/
+}
 
 /*Parte mobile*/
 @media screen and (max-width: 768px) {
