@@ -51,11 +51,15 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    flex-grow: 1;/*Adiciona o espaço extra no item*/
+    flex-grow: 2;/*Adiciona o espaço extra no item*/
 }
 
 .videoSobre-sobre-list {
     flex-grow: 1;/*Adiciona todo o espaço na lista fazendo com que o botão fique no final da pagina*/
+}
+
+.videoSobre-video {
+    flex-grow: 1;
 }
 
 /*Parte mobile*/
