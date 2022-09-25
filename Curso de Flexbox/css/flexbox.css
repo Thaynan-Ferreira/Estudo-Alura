@@ -24,10 +24,11 @@
     display: flex; /*Faz com que os elementos filhos fiquem com o msm tamanho*/
 }
 
+/*Configuração do mapa de cursos*/
 .rodapePrincipal-navMap-list {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 252px;
+    flex-direction: column;/*Define que os elementos ficarão dispostos um embaixo do outro*/
+    height: 252px;/*Define a altura do elemento pai onde as informações deve ficar armazenadas*/
+    flex-wrap: wrap;/*Faz com que o conteudo "Quebre a linha para ficar coportado dentro do elemento pai"*/
 }
 
