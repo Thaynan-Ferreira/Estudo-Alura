@@ -60,6 +60,7 @@
 
 .videoSobre-video {
     flex-grow: 1;
+    flex-shrink: 2;
 }
 
 /*Parte mobile*/
@@ -106,5 +107,11 @@
     /*Define que o menu "Nosso App" fique na frente na versão mobile*/
     .cabecalhoPrincipal-nav-link-app {
         order: -1;
+    }
+    .videoSobre .container {
+        flex-direction: column;
+    }
+    .videoSobre-video {
+        margin: auto;
     }
 }
