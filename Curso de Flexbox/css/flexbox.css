@@ -23,3 +23,11 @@
 .rodapePrincipal-contatoForm-fieldset {
     display: flex; /*Faz com que os elementos filhos fiquem com o msm tamanho*/
 }
+
+.rodapePrincipal-navMap-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 252px;
+}
+
