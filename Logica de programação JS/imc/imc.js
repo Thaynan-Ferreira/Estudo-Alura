@@ -25,7 +25,19 @@ function clicar() {
     var pesoInformado = document.querySelector("input.peso").value;
     var resultado = document.querySelector("div.resposta");
     var resposta = calculaImc(pesoInformado, alturaInformada)
-    resultado.innerHTML = `O IMC de ${nomeInformado} é ${resposta}`;
+    resultado.innerHTML = `O IMC de ${nomeInformado} é ${resposta}<br>`;
+
+    if (resposta < 18.5) {
+        resultado.innerHTML += `Cuidado ${nomeInformado} com o IMC ${resposta} você está abaixo do peso`;
+    }
+
+    else if (resposta >= 18.5 && resposta <= 35) {
+        resultado.innerHTML += `Otimo ${nomeInformado}! com o IMC ${resposta} você está no peso ideal.`;
+    }
+
+    else {
+        resultado.innerHTML += `Cuidado ${nomeInformado} com o IMC ${resposta} você está acima do peso`;
+    }
 
 }
 

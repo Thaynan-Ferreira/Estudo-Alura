@@ -10,7 +10,8 @@ function clicar() {
     var pontosEmpates = Number(empates);
     var totalPontos = pontosEmpates + pontosVitorias;
 
-    resposta.innerHTML = (`O Time do ${nome} com ${vitorias}V e ${empates}E possui ${totalPontos} pontos<br>`);
+    resposta.innerHTML = (`No ano passado seu time fez 28 pontos<br>`)
+    resposta.innerHTML += (`O Time do ${nome} com ${vitorias}V e ${empates}E possui ${totalPontos} pontos<br>`);
 
     if (totalPontos < 28) {
         resposta.innerHTML += (`Com ${totalPontos} seu time está pior que ano passado`)
