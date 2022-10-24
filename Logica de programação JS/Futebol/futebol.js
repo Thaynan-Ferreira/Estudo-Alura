@@ -8,6 +8,19 @@ function clicar() {
     //calculando pontos
     var pontosVitorias = vitorias * 3;
     var pontosEmpates = Number(empates);
+    var totalPontos = pontosEmpates + pontosVitorias;
 
-    resposta.innerHTML = (`O Time do ${nome} com ${vitorias}V e ${empates}E possui ${pontosEmpates + pontosVitorias} pontos`);
+    resposta.innerHTML = (`O Time do ${nome} com ${vitorias}V e ${empates}E possui ${totalPontos} pontos<br>`);
+
+    if (totalPontos < 28) {
+        resposta.innerHTML += (`Com ${totalPontos} seu time está pior que ano passado`)
+    }
+
+    else if (totalPontos == 28) {
+        resposta.innerHTML += (`Com ${totalPontos} seu time está igual que ano passado`)
+    }
+
+    else {
+        resposta.innerHTML += (`Com ${totalPontos} seu time está melhor que ano passado que ano passado`)
+    }
 }
