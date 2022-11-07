@@ -13,7 +13,7 @@
 
     <script>
 
-        function desenhaQuadradoVerde(iniciox, inicioy, largura, altura, cor) {
+        function desenhaQuadrado(iniciox, inicioy, largura, altura, cor) {
             pincel.fillStyle = cor;
             pincel.fillRect(iniciox, inicioy, largura, altura);
             pincel.strokeStyle = "blue";
@@ -23,13 +23,17 @@
         var tela = document.querySelector("canvas");
         var pincel = tela.getContext("2d");
 
-        desenhaQuadradoVerde(0, 0, 50, 50, "blue");
-        desenhaQuadradoVerde(50, 0, 50, 50, "red");
-        desenhaQuadradoVerde(100, 0, 50, 50, "black");
-        desenhaQuadradoVerde(150, 0, 50, 50, "yellow");
-        desenhaQuadradoVerde(200, 0, 50, 50, "pink");
-        desenhaQuadradoVerde(250, 0, 50, 200, "purple");
+        var x = 0;
+        var y = 0;
+        while (y < 400){
+            while (x < 600){
 
+                desenhaQuadrado(x, y, 50, 50, "green");
+                x = x + 50;
+            }
+            x = 0;
+            y = y + 50;
+        }
     </script>
     
 </body>
