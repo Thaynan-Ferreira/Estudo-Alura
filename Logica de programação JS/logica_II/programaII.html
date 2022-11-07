@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas width="600" height="400">
+
+    </canvas>
+
+    <script>
+
+        function desenhaQuadradoVerde(iniciox, inicioy, largura, altura, cor) {
+            pincel.fillStyle = cor;
+            pincel.fillRect(iniciox, inicioy, largura, altura);
+            pincel.strokeStyle = "blue";
+            pincel.strokeRect(iniciox, inicioy, largura, altura);
+        }
+
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext("2d");
+
+        desenhaQuadradoVerde(0, 0, 50, 50, "blue");
+        desenhaQuadradoVerde(50, 0, 50, 50, "red");
+        desenhaQuadradoVerde(100, 0, 50, 50, "black");
+        desenhaQuadradoVerde(150, 0, 50, 50, "yellow");
+        desenhaQuadradoVerde(200, 0, 50, 50, "pink");
+        desenhaQuadradoVerde(250, 0, 50, 200, "purple");
+
+    </script>
+    
+</body>
+</html>
