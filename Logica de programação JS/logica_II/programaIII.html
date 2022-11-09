@@ -15,22 +15,41 @@
 
         var tela = document.querySelector("canvas");
         var pincel = tela.getContext("2d");
+        var cores = ["blue", "red", "green"];
+        var i = 0
 
         pincel.fillStyle = "grey";
         pincel.fillRect(0, 0, 600, 400);
 
+        pincel.fillStyle = cores[i];
         function desenhaCirculo(evento) {
 
             var x = evento.pageX - tela.offsetLeft;
             var y = evento.pageY - tela.offsetTop;
-            pincel.fillStyle = "red";
             pincel.beginPath();
             pincel.arc(x, y, 10, 0, 2 * 3.14);
             pincel.fill();
 
         }
 
+        function mudaCor(eventodir) {
+            
+            if (i == cores.length - 1) {
+                i = 0;
+                pincel.fillStyle = cores[i];
+            }
+            else{
+                pincel.fillStyle = cores[i+1];
+                i++;
+            }
+            
+            
+            alert("Funcionou");
+            return false;
+        }
+
         tela.onclick = desenhaCirculo;
+        tela.oncontextmenu = mudaCor;
     </script>
     
 </body>
