@@ -15,7 +15,7 @@
 
         var tela = document.querySelector("canvas");
         var pincel = tela.getContext("2d");
-        var cores = ["blue", "red", "green"];
+        var cores = ["black", "purple", "green"];
         var i = 0
 
         pincel.fillStyle = "grey";
@@ -25,22 +25,27 @@
         var raio = 10;
         function desenhaCirculo(evento) {
 
+            var clicado = evento.buttons
             var shift = evento.shiftKey;
             var x = evento.pageX - tela.offsetLeft;
             var y = evento.pageY - tela.offsetTop;
             
+            //console.log(evento);
             if(shift) {
                 raio = raio + 10;
             }
 
-            pincel.beginPath();
-            pincel.arc(x, y, raio, 0, 2 * 3.14);
-            pincel.fill();
+            if (clicado == 1) {
+                pincel.beginPath();
+                pincel.arc(x, y, raio, 0, 2 * 3.14);
+                pincel.fill();
+            }
+            
 
             
 
         }
-
+        
         function mudaCor(eventodir) {
             
             if (i == cores.length - 1) {
@@ -51,13 +56,10 @@
                 pincel.fillStyle = cores[i+1];
                 i++;
             }
-            
-            
-            alert("Funcionou");
             return false;
         }
 
-        tela.onclick = desenhaCirculo;
+        tela.onmousemove = desenhaCirculo;
         tela.oncontextmenu = mudaCor;
     </script>
     
