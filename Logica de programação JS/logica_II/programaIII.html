@@ -10,21 +10,24 @@
     <canvas width="600" height="400">
 
     </canvas>
+    <br>
+    Escolha uma cor <input type="color">
 
     <script>
 
         var tela = document.querySelector("canvas");
         var pincel = tela.getContext("2d");
-        var cores = ["black", "purple", "green"];
+        var cor = document.querySelector("input");
         var i = 0
 
         pincel.fillStyle = "grey";
         pincel.fillRect(0, 0, 600, 400);
 
-        pincel.fillStyle = cores[i];
+        
         var raio = 10;
         function desenhaCirculo(evento) {
 
+            
             var clicado = evento.buttons
             var shift = evento.shiftKey;
             var x = evento.pageX - tela.offsetLeft;
@@ -37,6 +40,7 @@
 
             if (clicado == 1) {
                 pincel.beginPath();
+                pincel.fillStyle = cor.value;
                 pincel.arc(x, y, raio, 0, 2 * 3.14);
                 pincel.fill();
             }
@@ -46,18 +50,6 @@
 
         }
         
-        function mudaCor(eventodir) {
-            
-            if (i == cores.length - 1) {
-                i = 0;
-                pincel.fillStyle = cores[i];
-            }
-            else{
-                pincel.fillStyle = cores[i+1];
-                i++;
-            }
-            return false;
-        }
 
         tela.onmousemove = desenhaCirculo;
         tela.oncontextmenu = mudaCor;
