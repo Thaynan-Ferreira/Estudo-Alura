@@ -1,11 +1,14 @@
 import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
+    
+    //ATRIBUTOS
     agencia;
     #cliente;
-
     #saldo = 0;
     
+
+    //ACESSORES
     set cliente(novoValor) {
         if(novoValor instanceof Cliente){
             this.#cliente = novoValor;
@@ -17,19 +20,28 @@ export class ContaCorrente {
         return this.#cliente;
     }
 
+
     get saldo() { //O GET PERMITE A LEITURA DO ATRIBUTO SEM O EXPOR PARA EXECUÇÃO
 
         return this.#saldo;
-    
+
     }
+
+    //CONSTRUTORES
+    constructor(agencia, cliente){
+
+        this.agencia = agencia;
+        this.cliente = cliente;
+    }
+
+
+    //METODOS
     sacar(valor){
         //CRIAÇÃO DO METODO
         if (valor >= this.#saldo) return; 
 
-            this.#saldo -= valor;// A PALAVRA this SERVE PARA QUE O TESTE SEJA FEITO NA DETERMINADA CLASSE QUE FOR CHAMADA
-            return valor;
-            
-        
+        this.#saldo -= valor;// A PALAVRA this SERVE PARA QUE O TESTE SEJA FEITO NA DETERMINADA CLASSE QUE FOR CHAMADA
+        return valor;
         
     }
 
