@@ -13,4 +13,4 @@ contaCorrenteThaynan.depositar(1000);//CHAMANDO O METODO DE DEPOSITO
 contaCorrenteThaynan.transferir(400, ContaCorrenteIsabela);
 contaCorrenteThaynan.depositar(100);
 
-console.log(cliente2.cpf)
+console.log(ContaCorrente.numeroDeContas)
