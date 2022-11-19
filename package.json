@@ -4,7 +4,8 @@
   "description": "Projeto do bytbanc para seus cliente",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node T:/ESTUDO/ALURA/POO - JS/byteBank index.js"
   },
   "repository": {
     "type": "git",

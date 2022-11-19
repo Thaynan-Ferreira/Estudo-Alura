@@ -11,9 +11,12 @@ cliente2.CPF = "88877766609";
 
 const contaCorrenteThaynan = new ContaCorrente();
 contaCorrenteThaynan.agencia = 1001;
+contaCorrenteThaynan.cliente = cliente1;
 
-contaCorrenteThaynan.depositar(1000)//CHAMANDO O METODO DE DEPOSITO
-const valorSacado = contaCorrenteThaynan.sacar(500);//CHAMANDO O METODO
-console.log(valorSacado);
+const ContaCorrenteIsabela = new ContaCorrente();
+ContaCorrenteIsabela.agencia = 1001;
+ContaCorrenteIsabela.cliente = cliente2;
 
-console.log(contaCorrenteThaynan);
+contaCorrenteThaynan.depositar(1000);//CHAMANDO O METODO DE DEPOSITO
+contaCorrenteThaynan.transferir(400, ContaCorrenteIsabela);
+contaCorrenteThaynan.depositar(100);
