@@ -18,7 +18,12 @@ const Formulario = (props) => {
             imagem,
             time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
+
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
@@ -36,7 +41,7 @@ const Formulario = (props) => {
                 obrigatorio={true} 
                 label="Cargo" 
                 placeholder="Digite seu Cargo"
-                value={cargo}
+                valor={cargo}
                 aoAlterado={valor => setCargo(valor)}
             />
 
@@ -44,7 +49,7 @@ const Formulario = (props) => {
                 obrigatorio={true} 
                 label="Imagem" 
                 placeholder="Digite o endereço da Imagem"
-                value={imagem}
+                valor={imagem}
                 aoAlterado={valor => setImagem(valor)}
             />
 
@@ -52,7 +57,7 @@ const Formulario = (props) => {
                 obrigatorio={true} 
                 label="Time" 
                 itens={props.nomesDosTimes}
-                value={time}
+                valor={time}
                 aoAlterado={valor => setTime(valor)}
             />
             <Botao>
