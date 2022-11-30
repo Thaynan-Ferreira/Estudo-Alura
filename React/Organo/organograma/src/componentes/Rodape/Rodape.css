@@ -1,0 +1,10 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #6278F7;
+}
+
+.redes ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
