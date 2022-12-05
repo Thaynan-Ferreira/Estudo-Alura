@@ -17,5 +17,10 @@
     "url": "https://github.com/Thaynan-Ferreira/Estudo-Alura/issues"
   },
   "homepage": "https://github.com/Thaynan-Ferreira/Estudo-Alura#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "next": "^13.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
