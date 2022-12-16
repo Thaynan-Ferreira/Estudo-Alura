@@ -1,6 +1,15 @@
-const Timeline = () => {
+import config from "../../../config.json";
+import styled from "styled-components";
+
+const Timeline = (props) => {
+    const playlistNames = Object.keys(props.playlists)
     return(
-        <div>Timeline</div>
+        <div>
+            {
+            playlistNames.map((playlistNames) => {
+                return playlistNames;
+            })}
+        </div>
     )
 
     

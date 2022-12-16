@@ -1,6 +1,23 @@
 {
     "name": "Thaynan Ferreira",
     "job": "Front-END dev",
-    "github": "Thaynan-Ferreira"
+    "github": "Thaynan-Ferreira",
+    "playlists": {
+        "jogos": [
+            {
+                "title": "algum titulo",
+                "url": "url",
+                "thumb": "thumbnail do video"
+            }
+        ],
+        
+        "front-end": [
+            {
+                "title": "algum titulo",
+                "url": "url",
+                "thumb": "thumbnail do video"
+            }
+        ]
+    }
 
 }

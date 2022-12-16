@@ -2,14 +2,16 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import Timeline from "./components/Timeline";
 import styled from "styled-components";
+import config from "../config.json"
 
 function Home() {
-  return (
+  config.playlists
 
+  return (
     <div style={{ backgroundColor: "red" }} >
       <Menu />
       <Header />
-      <Timeline />
+      <Timeline playlists={config.playlists}/>
     </div>
     
 

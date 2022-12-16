@@ -7,15 +7,28 @@ const StyledHeader = styled.div`
         height: 80px;
         border-radius: 50%;
     }
+    .user-info {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 16px 32px;
+        gap: 16px;
+    }
 `;
 const Header = () => {
     return (
         <StyledHeader>
-            <img src={`https://github.com/${config.github}.png`} alt="Banner" />
-            <img src="" alt="Foto do perfil" />
-            {config.name}
-            {config.job}
+            <img src="" alt="Banner" />
 
+            <section className="user-info">
+                <img src={`https://github.com/${config.github}.png`} alt="Foto do perfil" />
+
+                <div>
+                    <h2>{config.name}</h2>
+                    <p>{config.job}</p>
+                    
+                </div>
+            </section>
         </StyledHeader>
     )
 }
