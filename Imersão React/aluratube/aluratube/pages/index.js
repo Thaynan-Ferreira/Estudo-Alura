@@ -3,16 +3,23 @@ import Menu from "./components/Menu";
 import Timeline from "./components/Timeline";
 import styled from "styled-components";
 import config from "../config.json"
+import { CSSReset } from "../src/components/CSSReset";
 
 function Home() {
   config.playlists
 
   return (
-    <div style={{ backgroundColor: "red" }} >
-      <Menu />
-      <Header />
-      <Timeline playlists={config.playlists}/>
-    </div>
+    <>
+      <CSSReset />
+      <div style={{ 
+        //backgroundColor: "red"
+      }} >
+        <Menu />
+        <Header />
+        <Timeline playlists={config.playlists}/>
+      </div>
+    </>
+    
     
 
   )
