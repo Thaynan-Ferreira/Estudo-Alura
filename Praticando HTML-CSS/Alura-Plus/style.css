@@ -44,6 +44,7 @@ header{
     padding: 1em;
     color: var(--branco-principal);
     text-decoration: none;
+    margin-bottom: 1em;
     
 }
 
@@ -55,4 +56,12 @@ header{
 .container__aviso {
     color: var(--cinza-secundario);
     font-size: 12px;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
 }
