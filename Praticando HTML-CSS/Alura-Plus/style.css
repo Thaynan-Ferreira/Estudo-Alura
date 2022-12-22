@@ -28,7 +28,7 @@ header{
 }
 
 .container {
-    height: 100vh;
+    height: 70vh;
     display: grid;
     grid-template-columns: 50% 50%;
 }
@@ -94,4 +94,25 @@ header{
 
 .container__descricao {
     padding: 2em;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivo__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivo__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
 }
