@@ -116,3 +116,38 @@ header{
     font-size: 32px;
     color: var(--branco-principal);
 }
+
+.rodape {
+    text-align: center;
+    margin: 8em 8em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+}
+.rodape__logo {
+    margin-bottom: 1em;
+}
+
+.lista__link {
+    list-style-type: none;
+}
+.lista__link a {
+    text-decoration: none;
+    color: var(--branco-principal);
+
+}
+.rodape__copy {
+    height: 84px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+
+}
+
+.rodape__copy p {
+    font-size: 14px;
+    color: var(--cinza-secundario);
+}
