@@ -20,3 +20,6 @@
 .container__imagem {
     padding: 1em;
 }
+.container__imagem--direita {
+    padding: 0.5em;
+}
