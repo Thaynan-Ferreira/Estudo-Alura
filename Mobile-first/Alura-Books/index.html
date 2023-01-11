@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/style.css">
 </head>
@@ -59,10 +60,51 @@
             <input type="search" name="pesquisa" id="pesquisa" class="banner__pesquisa" placeholder="Qual será sua proxima leitura?">
         </section>
 
+        <section class="carrossel">
+            <h2 class="carrossel__titulo">Novos lançamentos</h2>
+            <!-- Slider main container -->
+<div class="swiper">
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <div class="swiper-slide"><img src="media/Liderança.png" alt="Livro de liderança em design"></div>
+      <div class="swiper-slide"><img src="media/ApacheKafka.png" alt=""></div>
+      <div class="swiper-slide"><img src="media/Portugol.png" alt=""></div>
+      <div class="swiper-slide"><img src="media/TheDivision.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="media/HerryPotter.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="media/Guia Front-end.png" alt=""></div>
+      
+    </div>
+    
+  
+    <!-- If we need navigation buttons -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  
+  </div>
+  
+        </section>
+
     </main>
 
     <footer>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+
+    </script>
 </body>
 </html>
