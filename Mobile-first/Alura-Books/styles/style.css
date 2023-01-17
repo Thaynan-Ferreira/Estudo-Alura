@@ -17,3 +17,6 @@ body {
     font-weight: 400;
 }
 
+.card__descricao {
+    display: flex;
+}
