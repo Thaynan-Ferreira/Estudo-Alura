@@ -50,7 +50,7 @@
     font-weight: 700;
 }
 
-.descricao__titulo--livro {
+.descricao__titulo--livro, .descricao__titulo--autora {
     color: var(--azul);
     font-size: 18px;
     font-weight: 700;
@@ -67,4 +67,8 @@
     font-weight: 700;
     color: var(--branco);
     text-decoration: none;
+}
+
+.descricao__estrelas {
+    margin-bottom: 0.5em;
 }
